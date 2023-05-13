@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from GUI3 import Ui_MainWindow3
 
 class Ui_MainWindow2(object):
+    # all Num___ Variables are used to contain prices for each item
     NumHam = 6
     NumBurger = 5
     NumTurkey = 7
@@ -13,13 +14,16 @@ class Ui_MainWindow2(object):
     NumIce = 6
     NumPie = 10
     NumCake = 12
-
+    
+# Opens next Window
     def openWindow(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow3()
         self.ui.setupUi(self.window)
         self.window.show()
-
+        
+        
+# Updates Window based on selection
     def click(self):
         def Ham():
             if self.HamBox.isChecked() and int(self.HamNum.value()) != 0:
