@@ -3,6 +3,7 @@ from GUI2 import Ui_MainWindow2
 
 
 class Ui_MainWindow1(object):
+    # The openWindow command is used with the begin button to open the next window
     def openWindow(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow2()
@@ -32,6 +33,7 @@ class Ui_MainWindow1(object):
         self.ImageStart.setPixmap(QtGui.QPixmap("GUI/th-1054332373.jpg"))
         self.ImageStart.setScaledContents(True)
         self.ImageStart.setObjectName("ImageStart")
+        # the following code opens the next Window from the Begin Button
         self.ButtonBegin = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.openWindow())
         self.ButtonBegin.setGeometry(QtCore.QRect(220, 460, 391, 71))
         font = QtGui.QFont()
